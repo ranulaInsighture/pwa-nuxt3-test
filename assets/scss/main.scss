@@ -1,0 +1,43 @@
+@import '~/node_modules/primeicons/primeicons.css';
+@import 'variable';
+
+:root {
+  --navbar-height: #{$navbar-height};
+}
+
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.content-container {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-bottom: var(--navbar-height);
+  height: calc(100vh - var(--navbar-height));
+}
+
+.nav-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: var(--navbar-height);
+  padding: 1px;
+  z-index: 1000;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navigation {
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    text-decoration: none;
+    color: #007bff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+}
